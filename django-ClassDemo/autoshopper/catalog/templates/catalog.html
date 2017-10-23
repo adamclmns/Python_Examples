@@ -1,0 +1,101 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="../../favicon.ico" rel="icon">
+
+  <title>{% block title %} AutoShopper - Catalog {% endblock %}</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" aria-expanded="false" aria-controls="navbar" type="button" data-toggle="collapse"
+          data-target="#navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <a class="navbar-brand" href="#">AutoShopper</a>
+      </div>
+      <div class="navbar-collapse collapse" id="navbar">
+        <ul class="nav navbar-nav">
+          <li><a href="/">Home</a></li>
+          <li class="active"><a href="/catalog">Catalog</a></li>
+          <!--
+            <li><a href="#contact">Contact</a></li>
+            -->
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <!-- Main component for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <h1>Autoshopper Catalog</h1>
+      <p>Use the yet-to-exist menus to sort this list of yet-to-be-generated cars :)</p>
+
+      <p>
+        <a class="btn btn-lg btn-primary" role="button" href="../../components/#navbar">View navbar docs »</a>
+      </p>
+      <div>
+       
+      </div>
+    </div>
+<div style="clear:both;display:block;"><hr /></div>
+
+    <div class="row">
+      {% for auto in autos %}
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <img src="/static/media/micro-machines-galoob.jpg" alt="...">
+          <div class="caption">
+            <h3>{{auto.year}} {{auto.make}} {{auto.model}}</h3>
+            <p>This is a wonderful {{auto.color}} vehicle with {{auto.mileage}} miles on it.  </p>
+            <p><a href="#" class="btn btn-primary" role="button">See More</a> <a href="#" class="btn btn-default" role="button">Add to List</a></p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div><!-- /thumnail Label widget-->
+  </div>
+  <!-- /container -->
+
+
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script>
+    window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
+  </script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

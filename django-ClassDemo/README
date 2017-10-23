@@ -1,0 +1,10 @@
+This is a Django app that looks like a car shopping site. 
+
+Automobile.py
+Colors.py 
+
+These are used to generate test data. 
+
+autoshopper/
+
+This is the django app. 
